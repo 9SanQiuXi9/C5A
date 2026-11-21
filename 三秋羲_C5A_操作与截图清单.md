@@ -1,0 +1,75 @@
+# 三秋羲_C5A_操作与截图清单
+
+> 用途：把已经准备好的本地内容推到 GitHub，并补齐评分所需的真实截图。
+> 当前状态：两次 push 均已完成（`c25e04d`、`abc5fbb`），截图 01–07 已放入 `三秋羲_C5A_screenshots/`。
+> 下文保留当时的操作路线作为记录，**都不需要伪造任何证据**。
+
+## 一、推送与上传（二选一）
+
+### 路线 A：git 命令（网络恢复后）
+
+在本地 neoskills 工作副本中：
+
+```bash
+# 1) 确认分支与 commit
+git branch --show-current        # 应为 docs/readme-zh-cn
+git log --oneline -1             # 应为 c25e04d docs: add Simplified Chinese translation of README
+
+# 2) 推送贡献分支到 fork
+git push fork docs/readme-zh-cn
+```
+
+在本地个人仓库工作副本中：
+
+```bash
+git log --oneline -1             # 应为 abc5fbb docs: add Elite20 portfolio README and C5A repository analysis
+git push -u origin main
+```
+
+### 路线 B：GitHub 网页版（只需要浏览器）
+
+**B1. 在 fork 上建分支并提交翻译**
+
+1. 打开 <https://github.com/9SanQiuXi9/neoskills>；
+2. 点分支下拉框（默认 `main`）→ **View all branches** → **New branch**；
+3. 分支名填 `docs/readme-zh-cn`，源分支选 `main` → **Create branch**；
+4. 确认当前分支已切换到 `docs/readme-zh-cn`；
+5. **Add file → Upload files**，上传本目录下的 `三秋羲_C5A_贡献内容/README.zh-CN.md`；
+6. 提交信息填 `docs: add Simplified Chinese translation of README` → **Commit changes**；
+7. 打开 `README.md` → 右上角铅笔图标 → 在第 6 行徽章下方加一行：
+   `[English](README.md) | [简体中文](README.zh-CN.md)`
+8. 提交到 `docs/readme-zh-cn` 分支，提交信息填 `docs: link Chinese translation from README`。
+
+**B2. 在个人仓库上传文档**
+
+1. 打开 <https://github.com/9SanQiuXi9/SanQiuXi-elite20>；
+2. **Add file → Upload files**；
+3. 上传三个文件：`README.md`、`三秋羲_C5A_仓库分析.md`、`三秋羲_C5A_深度分析.md`；
+4. 提交信息填 `docs: add Elite20 portfolio README and C5A repository analysis` → **Commit changes**。
+
+## 二、截图清单（放入 `三秋羲_C5A_screenshots/`）
+
+| 文件名 | 页面 | 要拍到的内容 |
+|---|---|---|
+| `01_账号主页.png` | <https://github.com/9SanQiuXi9> | 头像、用户名 `9SanQiuXi9`、仓库数量 |
+| `02_个人仓库.png` | <https://github.com/9SanQiuXi9/SanQiuXi-elite20> | 仓库名、README 正文（姓名/专业/一句话介绍）、文件列表 |
+| `03_Fork页面.png` | <https://github.com/9SanQiuXi9/neoskills> | 仓库名 `neoskills`、标题下方的 “forked from neolaf2/neoskills” |
+| `04_分支页面.png` | <https://github.com/9SanQiuXi9/neoskills/branches> | `docs/readme-zh-cn` 分支存在 |
+| `05_commit历史.png` | <https://github.com/9SanQiuXi9/neoskills/commits/docs/readme-zh-cn> | 中文翻译的 commit 及其时间 |
+| `06_本地clone.png` | 本地终端 | `git clone` 输出 + `git log --oneline -3` + `git branch --show-current` |
+
+截图建议：浏览器窗口最大化，保留地址栏；文件用上面的英文/数字命名，排序稳定。
+
+## 三、文档同步记录
+
+1. `三秋羲_C5A_AAR.md` 的「结果一览」已改为四级全部完成，并补上 commit 链接；
+2. 本文件顶部「当前状态」已改为「已推送，截图已补齐」；
+3. 两次 push 用的都是本地 commit，远端哈希与本地一致，无需替换。
+
+## 四、不要做的事
+
+- 不要用生成的图片冒充 GitHub 页面截图；
+- 不要把本地 commit 写成「已 push」；
+- 不要在 AI 日志里补写没有发生的命令输出。
+
+评分看的是「操作是否真的发生」，不是「文档写得多像」。
